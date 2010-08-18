@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @address_book.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @address_book.address %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @address_book.company %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @address_book.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @address_book.phone %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @address_book.domain %>
+</p>
+
+
+<%= link_to 'Edit', edit_address_book_path(@address_book) %> |
+<%= link_to 'Back', address_books_path %>
