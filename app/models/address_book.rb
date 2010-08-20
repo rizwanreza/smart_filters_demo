@@ -6,13 +6,13 @@ class AddressBook < ActiveRecord::Base
           case options[column.name.to_sym].keys.first
           when "contains" 
             return find(:all, 
-                        :conditions => ['name LIKE ?', "%#{options[column.name.to_sym]["contains"]}%"])
+                        :conditions => ["#{column.name} LIKE ?", "%#{options[column.name.to_sym]["contains"]}%"])
           when "does_not_contain"
             return find(:all, 
-                        :conditions => ['name NOT LIKE ?', "%#{options[column.name.to_sym]["does_not_contain"]}%"])
+                        :conditions => ["#{column.name} NOT LIKE ?", "%#{options[column.name.to_sym]["does_not_contain"]}%"])
           when "is"
             return find(:all, 
-                        :conditions => ['name = ?', "#{options[column.name.to_sym]["is"]}"])
+                        :conditions => ["#{column.name} = ?", "#{options[column.name.to_sym]["is"]}"])
           end
         end
       end

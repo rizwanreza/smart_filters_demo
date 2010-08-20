@@ -3,6 +3,8 @@
 <%
 if params[:criteria] && params[:name]
   @address_books = AddressBook.smart_filter(:name => {params[:criteria] => params[:name]})
+elsif params[:criteria] && params[:address]
+  @address_books = AddressBook.smart_filter(:address => {params[:criteria] => params[:address]})
 end
 %>
 
@@ -20,6 +22,22 @@ end
     <input type="submit" value="Continue &rarr;">
   </form>
 </div>
+
+<div id="address-smart-field">
+  <form action="/address_books" method="get" accept-charset="utf-8">
+    <fieldset>
+    <select name="criteria" id="criteria">
+      <option value="contains">Contains</option>
+      <option value="does_not_contain">Does not contain</option>
+      <option value="is">is</option>
+    </select>
+    
+    <label for="name">Address</label>
+    <input type="text" name="address" value="" id="address">
+    <input type="submit" value="Continue &rarr;">
+  </form>
+</div>
+
 
 <table>
   <tr>
