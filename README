@@ -1,4 +1,5 @@
 This is the application smart_filters will be extracted from.
 
+bundle install
 rake db:create db:migrate db:seed
 script/server
