@@ -2,26 +2,16 @@
 
 <%
 if params[:criteria] && params[:name]
-  if params[:criteria] == "contains"
-    @address_books = AddressBook.find(:all, :conditions => ['name LIKE ?', "%#{params[:name]}%"])
-  end
-
-  if params[:criteria] == "not_contain"
-    @address_books = AddressBook.find(:all, :conditions => ['name NOT LIKE ?', "%#{params[:name]}%"])
-  end
-
-  if params[:criteria] == "is"
-    @address_books = AddressBook.find(:all, :conditions => ['name = ?', "#{params[:name]}"])
-  end
+  @address_books = AddressBook.smart_filter(:name => {params[:criteria] => params[:name]})
 end
 %>
 
 <div id="name-smart-field">
-
   <form action="/address_books" method="get" accept-charset="utf-8">
+    <fieldset>
     <select name="criteria" id="criteria">
       <option value="contains">Contains</option>
-      <option value="not_contain">Does not contain</option>
+      <option value="does_not_contain">Does not contain</option>
       <option value="is">is</option>
     </select>
     

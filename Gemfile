@@ -8,5 +8,5 @@ group :development do
   gem "thin"
 end
 
-group :test do
-end
+gem "rspec-rails"
+gem "rspec"

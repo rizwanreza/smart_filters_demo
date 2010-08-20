@@ -1,0 +1,241 @@
+# Logfile created on Fri Aug 20 15:51:58 +0430 2010
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 15:52:09) [GET]
+  [4;36;1mAddressBook Load (56.8ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1377ms (View: 1272, DB: 57) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 15:52:24) [GET]
+  Parameters: {"name"=>"Jeffry Hand", "criteria"=>"is"}
+  [4;35;1mAddressBook Load (42.8ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name = 'Jeffry Hand') [0m
+Completed in 88ms (View: 14, DB: 44) | 200 OK [http://localhost/address_books?criteria=is&name=Jeffry+Hand]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 15:52:30) [GET]
+  [4;35;1mAddressBook Load (43.0ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1232ms (View: 1160, DB: 43) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 16:00:20) [GET]
+  [4;36;1mAddressBook Load (42.2ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1233ms (View: 1160, DB: 42) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#show (for 127.0.0.1 at 2010-08-20 16:25:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAddressBook Load (0.6ms)[0m   [0mSELECT * FROM "address_books" WHERE ("address_books"."id" = 3) [0m
+Rendering template within layouts/address_books
+Rendering address_books/show
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/address_books/3]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 16:25:16) [GET]
+  [4;36;1mAddressBook Load (42.5ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1229ms (View: 1158, DB: 42) | 200 OK [http://localhost/]
+  [4;36;1mAddressBook Load (1.2ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.1ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.9ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.2ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.8ms)[0m   [0mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (1.1ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.1ms)[0m   [0mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (1.0ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.1ms)[0m   [0mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (1.0ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.1ms)[0m   [0mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAddressBook Load (42.7ms)[0m   [0mSELECT * FROM "address_books" [0m
+  [4;36;1mAddressBook Load (43.3ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+  [4;35;1mAddressBook Load (42.4ms)[0m   [0mSELECT * FROM "address_books" [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.3ms)[0m   [0mSELECT * FROM "address_books" WHERE (address_books.name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.9ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (42.2ms)[0m   [0mSELECT * FROM "address_books" [0m
+  [4;36;1mAddressBook Load (45.1ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.7ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (0.8ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (0.8ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (45.0ms)[0m   [0mSELECT * FROM "address_books" WHERE (name NOT LIKE '%Jeffry%') [0m
+  [4;36;1mAddressBook Load (45.1ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name NOT LIKE '%Jeffry%') [0m
+  [4;35;1mAddressBook Load (1.0ms)[0m   [0mSELECT * FROM "address_books" WHERE (name = 'Jeffry Hand') [0m
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:21) [GET]
+  [4;36;1mAddressBook Load (43.9ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1460ms (View: 1386, DB: 44) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:22) [GET]
+  [4;35;1mAddressBook Load (46.7ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1426ms (View: 1347, DB: 47) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:24) [GET]
+  [4;36;1mAddressBook Load (46.2ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1289ms (View: 1209, DB: 46) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:25) [GET]
+  [4;35;1mAddressBook Load (43.4ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1286ms (View: 1211, DB: 43) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:26) [GET]
+  [4;36;1mAddressBook Load (43.4ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+Completed in 1324ms (View: 1249, DB: 43) | 200 OK [http://localhost/]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:28) [GET]
+  Parameters: {"name"=>"jeffry Hand", "criteria"=>"contains"}
+  [4;35;1mAddressBook Load (45.1ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+
+ActionView::TemplateError (undefined method `smart_filter' for #<ActionView::Base:0x1061f0570>) on line #5 of app/views/address_books/index.html.erb:
+2: 
+3: <%
+4: if params[:criteria] && params[:name]
+5:   smart_filter(:name => {params[:criteria] => params[:name]})
+6: end
+7: %>
+8: 
+
+    app/views/address_books/index.html.erb:5
+    app/controllers/address_books_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.9ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:38) [GET]
+  Parameters: {"name"=>"jeffry Hand", "criteria"=>"contains"}
+  [4;36;1mAddressBook Load (43.3ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%jeffry Hand%') [0m
+Completed in 1312ms (View: 1236, DB: 44) | 200 OK [http://localhost/address_books?criteria=contains&name=jeffry+Hand]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:11:55) [GET]
+  Parameters: {"name"=>"jeffry Hand", "criteria"=>"contains"}
+  [4;36;1mAddressBook Load (46.5ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;35;1mAddressBook Load (0.7ms)[0m   [0mSELECT * FROM "address_books" WHERE (name LIKE '%jeffry Hand%') [0m
+Completed in 104ms (View: 23, DB: 47) | 200 OK [http://localhost/address_books?criteria=contains&name=jeffry+Hand]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:12:01) [GET]
+  Parameters: {"name"=>"Jeffry", "criteria"=>"not_contain"}
+  [4;36;1mAddressBook Load (43.4ms)[0m   [0;1mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+
+ActionView::TemplateError (undefined method `address' for #<ActiveRecord::ConnectionAdapters::SQLiteColumn:0x1064f4ca8>) on line #37 of app/views/address_books/index.html.erb:
+34: <% @address_books.each do |address_book| %>
+35:   <tr>
+36:     <td><%=h address_book.name %></td>
+37:     <td><%=h address_book.address %></td>
+38:     <td><%=h address_book.company %></td>
+39:     <td><%=h address_book.email %></td>
+40:     <td><%=h address_book.phone %></td>
+
+    app/views/address_books/index.html.erb:37
+    app/views/address_books/index.html.erb:34:in `each'
+    app/views/address_books/index.html.erb:34
+    app/controllers/address_books_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:12:40) [GET]
+  Parameters: {"name"=>"jeffry Hand", "criteria"=>"contains"}
+  [4;35;1mAddressBook Load (43.3ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;36;1mAddressBook Load (0.8ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name LIKE '%jeffry Hand%') [0m
+Completed in 113ms (View: 31, DB: 44) | 200 OK [http://localhost/address_books?criteria=contains&name=jeffry+Hand]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:12:45) [GET]
+  Parameters: {"name"=>"Jeffry", "criteria"=>"does_not_contain"}
+  [4;35;1mAddressBook Load (43.0ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;36;1mAddressBook Load (42.5ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name NOT LIKE '%Jeffry%') [0m
+Completed in 1349ms (View: 1234, DB: 86) | 200 OK [http://localhost/address_books?criteria=does_not_contain&name=Jeffry]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:13:47) [GET]
+  Parameters: {"name"=>"Jeffry", "criteria"=>"is"}
+  [4;35;1mAddressBook Load (43.4ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;36;1mAddressBook Load (0.3ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name = 'Jeffry') [0m
+Completed in 81ms (View: 6, DB: 44) | 200 OK [http://localhost/address_books?criteria=is&name=Jeffry]
+
+
+Processing AddressBooksController#index (for 127.0.0.1 at 2010-08-20 18:13:54) [GET]
+  Parameters: {"name"=>"jeffry hand", "criteria"=>"is"}
+  [4;35;1mAddressBook Load (43.7ms)[0m   [0mSELECT * FROM "address_books" [0m
+Rendering template within layouts/address_books
+Rendering address_books/index
+  [4;36;1mAddressBook Load (0.3ms)[0m   [0;1mSELECT * FROM "address_books" WHERE (name = 'jeffry hand') [0m
+Completed in 203ms (View: 6, DB: 44) | 200 OK [http://localhost/address_books?criteria=is&name=jeffry+hand]
