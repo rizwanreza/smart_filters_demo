@@ -2,7 +2,7 @@
 
 <%
 if params[:criteria] && params[:name]
-  @address_books = AddressBook.smart_filter(:name => {params[:criteria] => params[:name]})
+  @address_books = AddressBook.smart_filter({:name => {params[:criteria] => params[:name]}})
 elsif params[:criteria] && params[:address]
   @address_books = AddressBook.smart_filter(:address => {params[:criteria] => params[:address]})
 end
@@ -43,6 +43,7 @@ end
   <tr>
     <th>Name</th>
     <th>Address</th>
+    <th>Zip Code</th>
     <th>Company</th>
     <th>Email</th>
     <th>Phone</th>
@@ -53,6 +54,7 @@ end
   <tr>
     <td><%=h address_book.name %></td>
     <td><%=h address_book.address %></td>
+    <td><%=h address_book.zipcode %></td>
     <td><%=h address_book.company %></td>
     <td><%=h address_book.email %></td>
     <td><%=h address_book.phone %></td>

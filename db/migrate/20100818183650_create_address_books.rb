@@ -3,6 +3,7 @@ class CreateAddressBooks < ActiveRecord::Migration
     create_table :address_books do |t|
       t.string :name
       t.text :address
+      t.integer :zipcode
       t.string :company
       t.string :email
       t.string :phone

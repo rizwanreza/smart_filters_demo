@@ -10,3 +10,4 @@ end
 
 gem "rspec-rails"
 gem "rspec"
+gem "factory_girl"
