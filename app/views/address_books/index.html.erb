@@ -1,10 +1,14 @@
 <h1>Listing address_books</h1>
 
 <%
-if params[:criteria] && params[:name]
+if params[:name]
   @address_books = AddressBook.smart_filter({:name => {params[:criteria] => params[:name]}})
-elsif params[:criteria] && params[:address]
+elsif params[:address]
   @address_books = AddressBook.smart_filter(:address => {params[:criteria] => params[:address]})
+elsif params[:zipcode] && params[:criteria] != 'between'
+  @address_books = AddressBook.smart_filter(:zipcode => {params[:criteria] => params[:zipcode][:first]})
+elsif params[:zipcode] && params[:criteria] == 'between'
+  @address_books = AddressBook.smart_filter(:zipcode => {params[:criteria] => [params[:zipcode][:first], params[:zipcode][:second]]})
 end
 %>
 
@@ -36,6 +40,22 @@ end
     </select>
     
     <input type="search" name="address" value="" id="address">
+    <input type="submit" value="Continue &rarr;">
+  </form>
+</div>
+<hr />
+<div id="zipcode-smart-field">
+  <form action="/address_books" method="get" accept-charset="utf-8">
+    <label for="zipcode">Zip Code</label>
+    <select name="criteria" id="criteria">
+      <option value="equals_to">Equals</option>
+      <option value="greater_than">Greater Than</option>
+      <option value="less_than">Less Than</option>
+      <option value="between">Between</option>
+    </select>
+    
+    <input type="search" name="zipcode[first]" value="" id="zipcode">
+    <input type="search" name="zipcode[second]" value="" id="zipcode">
     <input type="submit" value="Continue &rarr;">
   </form>
 </div>
