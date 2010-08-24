@@ -16,6 +16,15 @@ describe AddressBook do
       AddressBook.smart_filter({:name => {"magic" => "abracadabra"}}).should == []
     end
 
+    context "when the argument contains more than one filter" do
+      it "returns the record matching all the criteria" do
+        AddressBook.smart_filter({:name => {"contains" => "Bob"},
+                                  :address => {"contains" => "Abracarab"}}).should be_empty
+        AddressBook.smart_filter({:name => {"contains" => "Bob"},
+                                  :name => {"contains" => "Martin"}}).should have(1).item
+      end
+    end
+
     context "when the column to apply smart filtering is string or text" do
       context "when the criteria is 'contains'" do
 
