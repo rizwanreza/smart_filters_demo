@@ -24,6 +24,8 @@ module SmartFilter
                 :conditions => conditions)
   end
 
+  private
+
   def conditions
     @conds.flatten!
     @final = []
@@ -71,7 +73,7 @@ module SmartFilter
   def greater_than(column, term)
     ["#{column} > ?", term]
   end
-  
+
   def less_than(column, term)
     ["#{column} < ?", term]
   end
