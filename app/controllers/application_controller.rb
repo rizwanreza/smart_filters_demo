@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  private
   def sort_smart_filter
     if params[:smart_filter]
       search = params[:smart_filter]
