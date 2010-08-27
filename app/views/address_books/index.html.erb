@@ -1,42 +1,6 @@
 <h1>Listing address_books</h1>
 
-<%= smart_filter(AddressBook, :all) %>
-
-<% if params[:smart_filter] %>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Zip Code</th>
-    <th>Company</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Domain</th>
-  </tr>
-  <%
-  search = params[:smart_filter]
-  hash = {}
-  search.delete_if {|column, value| value[:value] == "" }
-  search.each do |column, value|
-    hash.merge!({column.to_sym => {value[:criteria] => value[:value]}})
-  end
-  %>
-  <% AddressBook.smart_filter(hash).each do |address_book| %>
-    <tr>
-      <td><%=h address_book.name %></td>
-      <td><%=h address_book.address %></td>
-      <td><%=h address_book.zipcode %></td>
-      <td><%=h address_book.company %></td>
-      <td><%=h address_book.email %></td>
-      <td><%=h address_book.phone %></td>
-      <td><%=h address_book.domain %></td>
-      <td><%= link_to 'Show', address_book %></td>
-      <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
-      <td><%= link_to 'Destroy', address_book, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-<% else %>
+<% smart_filter(AddressBook, :all) do %>
 
 <table>
   <tr>

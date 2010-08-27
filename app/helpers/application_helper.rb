@@ -18,7 +18,8 @@ module ApplicationHelper
 </div>
 =end
 
-  def smart_filter(model, cols)
+  def smart_filter(model, cols, &block)
+    body = capture(&block)
     html = ""
     html << "<form action='/address_books' method='get'>"
     columns(cols).each do |column|
@@ -31,7 +32,9 @@ module ApplicationHelper
     end
     html << "<input type='submit'>"
     html << "</form>"
-    html
+    html << render(:partial => 'shared/filtered_results') if @filtered_results
+    html << body unless @filtered_results
+    concat html
   end
 
   def columns(cols)
