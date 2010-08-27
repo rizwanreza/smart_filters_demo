@@ -15,6 +15,10 @@ describe AddressBook do
     it "returns an empty array if the criteria is unknown" do
       AddressBook.smart_filter({:name => {"magic" => "abracadabra"}}).should == []
     end
+    
+    it "returns all records if the column doesn't exist" do
+      AddressBook.smart_filter({:magician => {"magic" => "abracadabra"}}).should == AddressBook.find(:all)
+    end
 
     context "when the argument contains more than one filter" do
       it "returns the record matching all the criteria" do

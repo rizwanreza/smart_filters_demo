@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :address_books
+  map.resources :address_books, :collection => {:smart_filter => :post}
+  map.resource :smart_filter, :controller => 'smart_filter'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
