@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
       search.each do |column, value|
         hash.merge!({column.to_sym => {value[:criteria] => value[:value]}})
       end
-      @filtered_results = AddressBook.smart_filter(hash)
+      @filtered_results = params[:smart_filter][:model].constantize.smart_filter(hash)
     end
   end
 end
