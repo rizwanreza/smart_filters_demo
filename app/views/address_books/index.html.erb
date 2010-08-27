@@ -2,18 +2,6 @@
 
 <%= smart_filter(AddressBook, :all) %>
 
-<%#
-if params[:name]
-  @address_books = AddressBook.smart_filter({:name => {params[:criteria] => params[:name]}})
-elsif params[:address]
-  @address_books = AddressBook.smart_filter(:address => {params[:criteria] => params[:address]})
-elsif params[:zipcode] && params[:criteria] != 'between'
-  @address_books = AddressBook.smart_filter(:zipcode => {params[:criteria] => params[:zipcode][:first]})
-elsif params[:zipcode] && params[:criteria] == 'between'
-  @address_books = AddressBook.smart_filter(:zipcode => {params[:criteria] => [params[:zipcode][:first], params[:zipcode][:second]]})
-end
-%>
-
 <% if params[:smart_filter] %>
 <table>
   <tr>
