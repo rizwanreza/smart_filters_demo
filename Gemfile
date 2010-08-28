@@ -8,6 +8,7 @@ group :development do
   gem "thin"
 end
 
+gem "smart_filters"
 gem "rspec-rails"
 gem "rspec"
 gem "factory_girl"
